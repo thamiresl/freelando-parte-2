@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { Botao } from "../../componentes/Botao/Botao"
 import { Tipografia } from "../../componentes/Tipografia/Tipografia"
 
-import conclusao from '../assets/cliente-concluido.png'
+import conclusao from './assets/cliente-concluido.png'
 
 const ImagemEstilizada = styled.img`
     max-width: 100%;
