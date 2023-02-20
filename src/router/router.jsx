@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom"
+import Concluido from "../paginas/cadastro/Concluido";
 import DadosPessoais from "../paginas/cadastro/DadosPessoais";
 import Interesses from "../paginas/cadastro/Interesses";
 import LayoutBaseCadastro from "../paginas/cadastro/LayoutBaseCadastro";
@@ -28,7 +29,7 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: 'concluido',
-                        element: <h1>Concluído</h1>
+                        element: <Concluido />
                     }
                 ]
             }
