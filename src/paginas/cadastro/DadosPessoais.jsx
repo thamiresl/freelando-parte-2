@@ -45,10 +45,16 @@ const DadosPessoais = () => {
         setEmail, 
         setSenha, 
         setSenhaConfirmada, 
-        setUf
+        setUf,
+        submeterUsuario
     } = useCadastroUsuarioContext()
 
-    return (<div>
+    const finalizarCadastro = (evento) => {
+        evento.preventDefault();
+        submeterUsuario()
+    }
+
+    return (<form onSubmit={finalizarCadastro}>
         <div style={{ textAlign: 'center' }}>
             <Tipografia variante="h1" componente="h1">
                 Crie seu cadastro
@@ -119,15 +125,15 @@ const DadosPessoais = () => {
             </Col>
             <Col lg={6} md={6} sm={6}>
                 <div style={{ textAlign: 'right' }}>
-                    <Link to='/cadastro/concluido'>
-                        <Botao>
-                            Próxima
-                        </Botao>
-                    </Link>
+                    {/* <Link to='/cadastro/concluido'> */}
+                    <Botao>
+                        Próxima
+                    </Botao>
+                    {/* </Link> */}
                 </div>
             </Col>
         </Row>
-    </div>)
+    </form>)
 }
 
 export default DadosPessoais
